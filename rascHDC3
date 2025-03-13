@@ -93,3 +93,121 @@ fun exer6 () {
     println ("o total de alunos aprovados é: $aprovados")
 
 }
+
+//para arrumar e testar dps
+
+fun main () {
+    println ("vamos verificar a media aritimetica do aluno nessa ultimas seis avaliações: ")
+    var acumuladora = 0.0
+    var contadora = 0
+
+    while(contadora < 6) {
+        println("digite a nota do aluno: ")
+        var input = readLine()!!.toDouble()
+
+        if (input <= 10) {
+            acumuladora += input
+        } else {
+            println("Cerifique_se que o número informado é menor ou igual a dez.")
+            return
+        }
+        contadora++
+    }
+
+    var media = acumuladora / 6
+    val mediaFormatada = String.format("%.2f", media)
+
+    println ("a média artimetica do aluno é de: $mediaFormatada pontos de desempenho.")
+    exer8()
+}
+
+fun exer8 () {
+    println("Informe um Número de sua preferencia. O programa vai imprimir todos os números inteiros até o escolhido:" )
+    val num = readLine()!!.toInt()
+
+
+    for (i in 1..num) {
+        println(i)
+        Thread.sleep(10)
+    }
+    exer9()
+}
+
+fun exer9 () {
+    println("Os primeiros dez números maiores que 100: ")
+    var n = 110
+
+    for ( i in 100..n)
+        println(i)
+    Thread.sleep(100)
+
+    exer10()
+}
+
+fun exer10() {
+    println("Exercicio 10!")
+    //número 1
+    println ("Digite o número 1: ")
+    var num1 = readLine()!!.toInt()
+    var numEntre = 0
+    var numFora = 0
+
+    if (num1 in 24..42 ) {
+        numEntre++
+    } else {
+        numFora++
+    }
+
+    //número 2
+    println ("Digite o número 2: ")
+    var num2 = readLine()!!.toInt()
+
+    if (num2 in 24..42 ) {
+        numEntre++
+    } else {
+        numFora++
+    }
+
+    //número 3
+    println ("Digite o número 3: ")
+    var num3 = readLine()!!.toInt()
+
+    if (num3 in 24..42 ) {
+        numEntre++
+    } else {
+        numFora++
+    }
+
+    //número 4
+    println ("Digite o número 4: ")
+    var num4 = readLine()!!.toInt()
+
+    if (num4 in 24..42 ) {
+        numEntre++
+    } else {
+        numFora++
+    }
+
+    //número 5
+    println ("Digite o número 5: ")
+    var num5 = readLine()!!.toInt()
+
+    if (num5 in 24..42 ) {
+        numEntre++
+    } else {
+        numFora++
+    }
+
+    //número 6
+    println ("Digite o número 6: ")
+    var num6 = readLine()!!.toInt()
+
+    if (num6 in 24..42 ) {
+        numEntre++
+    } else {
+        numFora++
+    }
+
+    println("De todos os números informados, $numEntre números estão entre 24 e 42.")
+    println("os demais $numFora números estão fora.")
+}
