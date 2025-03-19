@@ -1,5 +1,27 @@
-fun main() {
-    exer2 ()
+fun main () {
+            exer1()
+        }
+        fun exer1 () {
+            println ("Exercício 1 ✨ ")
+            println ("Digite o primeiro número: ")
+            val num1 = readLine()?.toDoubleOrNull()
+            println ("Digite o segundo número: ")
+            var num2: Double? = null
+
+            while (num2 == null || num2 <= 0) {
+                println ("Para esta operação, o segundo número não pode ser igual ou menor que zero.")
+                num2 = readLine()?.toDoubleOrNull()
+            }
+
+            if (num1 != null && num2 != null) {
+
+                val div = num1/num2
+                println("O resultado de $num1 dividido por $num2 é igual a: $div.")
+            } else {
+                println("Entrada Inválida.")
+                return
+    }
+    exer2()
 }
 
 fun exer2(){
@@ -22,7 +44,7 @@ fun exer3 () {
     println ("Bora contar de 10 a 0 ai manow")
     while (contNum > 0 ) {
         println ("$contNum")
-        Thread.sleep (2000)
+        Thread.sleep (1000)
         contNum--
     }
     if (contNum == 0) {
@@ -31,6 +53,7 @@ fun exer3 () {
     exer4 ()
 }
 fun exer4 () {
+    println("exercicio 4: ")
     println ("Deixa eu te mostrar uma conta aqui rapidão. Cê sabe a média artimética dos números entre 15 a 100?")
     println ("quer saber?: sim ou não? ")
     var resp = readLine()?.lowercase()
@@ -51,6 +74,7 @@ fun mediaAri () {
 }
 
 fun exer5 () {
+    println("exercicio 5: ")
     println("Okay,agora faremos uma operação de média aritmetica com os números que você digitar ")
     println("vamos, informe dois números a seguir, considere que o primeiro será o menor: ")
     val num1 = readLine()?.toDoubleOrNull()
@@ -67,6 +91,7 @@ fun exer5 () {
     exer6()
 }
 fun exer6 () {
+    println("exercicios 6: ")
     println("então você quer saber se seu aluno passou? Vamos ver a média da criatura.")
     var aprovados = 0
     var resposta: String
@@ -91,12 +116,11 @@ fun exer6 () {
     } while (resposta == "S")
 
     println ("o total de alunos aprovados é: $aprovados")
-
+    exer7()
 }
 
-//para arrumar e testar dps
-
-fun main () {
+fun exer7 () {
+    println("exercicio 7: ")
     println ("vamos verificar a media aritimetica do aluno nessa ultimas seis avaliações: ")
     var acumuladora = 0.0
     var contadora = 0
@@ -122,6 +146,7 @@ fun main () {
 }
 
 fun exer8 () {
+    println("exercicio 8: ")
     println("Informe um Número de sua preferencia. O programa vai imprimir todos os números inteiros até o escolhido:" )
     val num = readLine()!!.toInt()
 
@@ -134,6 +159,7 @@ fun exer8 () {
 }
 
 fun exer9 () {
+    println("exercicio 9: ")
     println("Os primeiros dez números maiores que 100: ")
     var n = 110
 
@@ -210,4 +236,22 @@ fun exer10() {
 
     println("De todos os números informados, $numEntre números estão entre 24 e 42.")
     println("os demais $numFora números estão fora.")
+    exer11()
+}
+fun exer11() {
+    println("exercicio 11: Tabuada")
+    print("Digite o valor de N: ")
+    val n = readLine()?.toIntOrNull()
+    if (n != null && n > 0) {
+        // Laço para imprimir as tabuadas de 1 até N
+        for (i in 1..n) {
+            println("Tabuada do $i:")
+            for (j in 1..10) {
+                println("$i x $j = ${i * j}")
+            }
+            println()
+        }
+    } else {
+        println("Por favor, insira um número válido maior que 0.")
+    }
 }
